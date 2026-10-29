@@ -1,0 +1,1 @@
+ALTER TABLE public.branch_fuel_types ADD COLUMN IF NOT EXISTS buying_price NUMERIC(10,2);
