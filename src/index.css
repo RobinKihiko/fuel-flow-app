@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    /* Earthy palette: warm cream, terracotta, olive, clay */
+    --background: 38 35% 95%;
+    --foreground: 25 30% 15%;
+
+    --card: 40 40% 98%;
+    --card-foreground: 25 30% 15%;
+
+    --popover: 40 40% 98%;
+    --popover-foreground: 25 30% 15%;
+
+    /* Deep forest / coffee primary */
+    --primary: 25 35% 22%;
+    --primary-foreground: 40 50% 96%;
+
+    --secondary: 35 25% 88%;
+    --secondary-foreground: 25 30% 18%;
+
+    --muted: 35 20% 90%;
+    --muted-foreground: 25 15% 40%;
+
+    /* Terracotta accent */
+    --accent: 18 70% 48%;
+    --accent-foreground: 40 50% 97%;
+
+    --destructive: 0 65% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 32 25% 82%;
+    --input: 32 25% 82%;
+    --ring: 18 70% 48%;
+
+    --radius: 0.75rem;
+
+    /* Fuel colors — earthy variants */
+    --fuel-petrol: 95 40% 40%;     /* olive green */
+    --fuel-diesel: 28 55% 38%;     /* sienna */
+    --fuel-kerosene: 45 75% 50%;   /* mustard */
+    --success: 95 40% 40%;
+    --warning: 35 85% 50%;
+
+    /* Sidebar — deep coffee with warm accents */
+    --sidebar-background: 25 30% 15%;
+    --sidebar-foreground: 38 25% 82%;
+    --sidebar-primary: 18 75% 55%;
+    --sidebar-primary-foreground: 25 30% 12%;
+    --sidebar-accent: 25 25% 22%;
+    --sidebar-accent-foreground: 38 30% 90%;
+    --sidebar-border: 25 20% 25%;
+    --sidebar-ring: 18 75% 55%;
+  }
+
+  .dark {
+    /* Warm earthy dark: deep coffee, terracotta accents */
+    --background: 25 20% 8%;
+    --foreground: 38 30% 88%;
+
+    --card: 25 22% 12%;
+    --card-foreground: 38 30% 88%;
+
+    --popover: 25 22% 12%;
+    --popover-foreground: 38 30% 88%;
+
+    --primary: 18 70% 55%;
+    --primary-foreground: 25 30% 10%;
+
+    --secondary: 25 18% 18%;
+    --secondary-foreground: 38 25% 85%;
+
+    --muted: 25 15% 18%;
+    --muted-foreground: 35 15% 60%;
+
+    --accent: 18 75% 55%;
+    --accent-foreground: 25 30% 10%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 25 18% 22%;
+    --input: 25 18% 22%;
+    --ring: 18 75% 55%;
+
+    --fuel-petrol: 95 35% 50%;
+    --fuel-diesel: 28 50% 50%;
+    --fuel-kerosene: 45 70% 55%;
+    --success: 95 40% 50%;
+    --warning: 35 80% 55%;
+
+    --sidebar-background: 25 25% 10%;
+    --sidebar-foreground: 38 25% 80%;
+    --sidebar-primary: 18 75% 58%;
+    --sidebar-primary-foreground: 25 30% 10%;
+    --sidebar-accent: 25 22% 16%;
+    --sidebar-accent-foreground: 38 30% 88%;
+    --sidebar-border: 25 18% 18%;
+    --sidebar-ring: 18 75% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .font-mono-numbers {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
